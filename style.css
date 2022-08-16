@@ -1,0 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-image: linear-gradient(to top right, rgb(2, 0, 133), rgb(2, 0, 133), turquoise);
+    background-repeat: no-repeat;
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+	overflow: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#navbar{
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	color: white;
+	font-size: 20px;
+	padding: 30px;
+}
+#navbar h1{
+	font-size: 30px;
+}
+#navbar ul{
+	display: flex;
+}
+#navbar ul li{
+	margin-right: 30px;
+}
+#navbar ul li a{
+	text-decoration: none;
+	color: white;
+}
+main{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+main .text{
+	width: 40%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+	justify-content: space-evenly;
+}
+main .text h1{
+	font-size: 30px;
+	font-weight: bolder;
+	margin-bottom: 10px;
+}
+main .text p{
+	margin-top: 10px;
+}
+main .text a{
+	padding: 20px;
+	text-decoration: none;
+	color: white;
+	background-image: linear-gradient(to bottom right,rgb(78, 163, 243),rgb(2, 121, 231));
+	width: 120px;
+	border-radius: 30px;
+	text-align: center;
+}
+main .image img{
+	width: 400px;
+	max-width: 100%;
+	height: auto;
+}
+main .dot{
+	display: flex;
+}
+main .dot span{
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: white;
+	margin-right: 10px;
+}
+main .dot span:nth-child(3){
+	background-color: rgb(41, 38, 201);
+}
+@media only screen and (max-width: 600px) {
+	body{
+		overflow: visible;
+	}
+	#navbar{
+		display: none;
+	}
+	main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	main .text{
+		width: 100%;
+		text-align: center;
+	}
+	main .image img{
+		width: 90%;
+	}
+	main .text p{
+		margin: 0 20px;
+	}
+	main .text a{
+		margin: 0 auto;
+	}
+	main .text .link{
+		display: none;
+	}
+	main .dot{
+		display: none;
+	}
+}
